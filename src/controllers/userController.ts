@@ -10,6 +10,17 @@ class UserController {
         res.status(200).json(users);
     }
 
+    async getUserById(req: Request, res: Response) {
+        const usersRepository = getCustomRepository(UsersRepository);
+        const { id } = req.params;
+
+        const user = await usersRepository.findOne({
+            id
+        });
+
+        return res.status(200).json(user);
+    }
+
     async createUsers(req: Request, res: Response) {
         const usersRepository = getCustomRepository(UsersRepository);
         const { name, email, cpf, isActive } = req.body;        
