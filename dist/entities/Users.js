@@ -10,42 +10,41 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Users = void 0;
-var typeorm_1 = require("typeorm");
-var uuid_1 = require("uuid");
-var Users = /** @class */ (function () {
-    function Users() {
+const typeorm_1 = require("typeorm");
+const uuid_1 = require("uuid");
+let Users = class Users {
+    constructor() {
         if (!this.id) {
             this.id = uuid_1.v4();
         }
     }
-    __decorate([
-        typeorm_1.PrimaryColumn("uuid"),
-        __metadata("design:type", String)
-    ], Users.prototype, "id", void 0);
-    __decorate([
-        typeorm_1.Column(),
-        __metadata("design:type", String)
-    ], Users.prototype, "name", void 0);
-    __decorate([
-        typeorm_1.Column(),
-        __metadata("design:type", String)
-    ], Users.prototype, "email", void 0);
-    __decorate([
-        typeorm_1.Column(),
-        __metadata("design:type", String)
-    ], Users.prototype, "cpf", void 0);
-    __decorate([
-        typeorm_1.Column(),
-        __metadata("design:type", Boolean)
-    ], Users.prototype, "isActive", void 0);
-    __decorate([
-        typeorm_1.CreateDateColumn(),
-        __metadata("design:type", Date)
-    ], Users.prototype, "systemEntry", void 0);
-    Users = __decorate([
-        typeorm_1.Entity("users"),
-        __metadata("design:paramtypes", [])
-    ], Users);
-    return Users;
-}());
+};
+__decorate([
+    typeorm_1.PrimaryColumn("uuid"),
+    __metadata("design:type", String)
+], Users.prototype, "id", void 0);
+__decorate([
+    typeorm_1.Column(),
+    __metadata("design:type", String)
+], Users.prototype, "name", void 0);
+__decorate([
+    typeorm_1.Column(),
+    __metadata("design:type", String)
+], Users.prototype, "email", void 0);
+__decorate([
+    typeorm_1.Column(),
+    __metadata("design:type", String)
+], Users.prototype, "cpf", void 0);
+__decorate([
+    typeorm_1.Column(),
+    __metadata("design:type", Boolean)
+], Users.prototype, "isActive", void 0);
+__decorate([
+    typeorm_1.CreateDateColumn(),
+    __metadata("design:type", Date)
+], Users.prototype, "systemEntry", void 0);
+Users = __decorate([
+    typeorm_1.Entity("users"),
+    __metadata("design:paramtypes", [])
+], Users);
 exports.Users = Users;

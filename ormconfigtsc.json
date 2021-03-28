@@ -6,10 +6,10 @@
     "password": "postgres",
     "database": "users_project",
     "entities": [
-        "dist/entities/**/*.js"
+        "src/entities/**/*.ts"
     ],
     "migrations": [
-        "./dist/migrations/**/*.js"
+        "./src/migrations/**/*.ts"
     ],
     "cli": {
         "entitiesDir": "src/entity",
