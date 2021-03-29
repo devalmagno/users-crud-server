@@ -1,11 +1,15 @@
 import 'reflect-metadata';
+import dotenv from 'dotenv';
 import express from 'express';
 import { createConnection } from 'typeorm';
 import cors from 'cors';
 
 import { router } from './routes';
 
-createConnection();
+createConnection(); 
+
+dotenv.config();
+
 const app = express();
 
 app.use(cors());
