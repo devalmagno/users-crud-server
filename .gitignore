@@ -1,4 +1,5 @@
 node_modules
 project.MD
 .dist
-dist
+./dist
+.env
