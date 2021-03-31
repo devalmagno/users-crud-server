@@ -1,7 +1,7 @@
-console.log(`Database URL ${process.env.DATABASE_URL}`);
+console.log(`Database URL ${process.env.DATABASE_URI}`);
 module.exports = {
     "type": "postgres",
-    "url": process.env.DATABASE_URL,
+    "url": process.env.DATABASE_URI,
     "entities": [
         "dist/entities/**/*.js"
     ],
